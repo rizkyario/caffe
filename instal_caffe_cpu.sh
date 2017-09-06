@@ -15,11 +15,13 @@
 #   extract to the NVIDIA CUDA folder and perform necessary linking
 #   into your /usr/local/cuda/lib and /usr/local/cuda/include folders
 #   You will need to use sudo because the CUDA folder is owned by root
-sudo tar -xvf ~/Downloads/cudnn-8.0-osx-x64-v5.0-ga.tar /Developer/NVIDIA/CUDA-8.0/
+sudo tar -xvf ~/Downloads/cudnn-8.0-osx-x64-v6.0.tar /Developer/NVIDIA/CUDA-8.0/
 sudo ln -s /Developer/NVIDIA/CUDA-8.0/lib/libcudnn.dylib /usr/local/cuda/lib/libcudnn.dylib
 sudo ln -s /Developer/NVIDIA/CUDA-8.0/lib/libcudnn.5.dylib /usr/local/cuda/lib/libcudnn.5.dylib
 sudo ln -s /Developer/NVIDIA/CUDA-8.0/lib/libcudnn_static.a /usr/local/cuda/lib/libcudnn_static.a
 sudo ln -s /Developer/NVIDIA/CUDA-8.0/include/cudnn.h /usr/local/cuda/include/cudnn.h
+
+xcode-select --install
 
 # Install the brew dependencies
 #   Do not install python through brew. Only misery lies there
